@@ -1,0 +1,63 @@
+import sys  
+
+pergunta1= "Você telefonou para a vítima?"
+pergunta2= "Você esteve no local do crime?"
+pergunta3= "Você mora perto da vítima?"
+pergunta4= "Você devia dinheiro para a vítima?"
+pergunta5= "Você já trabalhou com a vítima?"
+pontuação = 0
+
+print('Responda as perguntas com "sim" ou "não".')
+print(pergunta1)
+resposta = input("Resposta: ")
+if resposta != "sim" and resposta != "não":
+  print('Resposta inválida. Por favor, responda com "sim" ou "não".')
+  sys.exit()
+elif resposta == "sim":
+    pontuação += 1
+print("Próxima pergunta:")
+
+print(pergunta2)
+resposta = input("Resposta: ")
+if resposta != "sim" and resposta != "não":
+    print('Resposta inválida. Por favor, responda com "sim" ou "não".')
+    sys.exit()
+elif resposta == "sim":
+    pontuação += 1
+    print("Próxima pergunta:")
+
+print(pergunta3)
+resposta = input("Resposta: ")
+if resposta != "sim" and resposta != "não":
+  print('Resposta inválida. Por favor, responda com "sim" ou "não".')
+  sys.exit()
+elif resposta == "sim":
+  pontuação += 1
+  print("Próxima pergunta:")
+
+print(pergunta4)
+resposta = input("Resposta: ")
+if resposta != "sim" and resposta != "não":
+  print('Resposta inválida. Por favor, responda com "sim" ou "não".')
+  sys.exit()
+elif resposta == "sim":
+  pontuação += 1
+  print("Próxima pergunta:")
+
+print(pergunta5)
+resposta = input("Resposta: ")
+if resposta != "sim" and resposta != "não":
+  print('Resposta inválida. Por favor, responda com "sim" ou "não".')
+  sys.exit()
+elif resposta == "sim":
+    pontuação += 1
+    print("Terminamos com as perguntas, já tenho um veredito sobre você.")
+
+if pontuação == 2:
+  print("Suspeito")
+elif pontuação >= 3 and pontuação <= 4:
+    print("Cúmplice")
+elif pontuação == 5:
+    print("Assassino")
+else:
+    print("Inocente")
